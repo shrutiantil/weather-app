@@ -6,6 +6,7 @@ outline: none;
 font-family: sans-serif;
 }
 
+
 body{min-height: 100vh;
 display: flex;
 justify-content: center;
@@ -49,11 +50,14 @@ font-size: 40px;
 background-color: #ababab;
 }
 
-.weather-body{display: flex;
+.weather-body{display: none;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 margin-block: 20px;
+}
+
+.weather-body img{height: 400px;
 }
 
 .weather.box{margin-block:20px;
@@ -101,5 +105,19 @@ font-size: 16px;
 font-weight: 700;
 }
 
+.location-not-found{margin-top: 20px;
+display: none;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
 
+
+.location-not-found h1{font-size: 20px;
+color: #6b6b6b;
+margin-block-end: 15px;
+}
+
+.location-not-found img{width: 80%;
+}
 
