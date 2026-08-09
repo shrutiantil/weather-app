@@ -1,6 +1,6 @@
 const inputBox=document.querySelector(".input-box");
 
-const searchBtn=document.getElementById("searchbtn");
+const searchBtn=document.getElementById("searchBtn");
 
 const weather_img=document.querySelector(".weather-img");
 
@@ -31,7 +31,9 @@ const weather_body=document.querySelector(".weather-body");
         console.log("error");
         return;
     }             
-    
+
+
+     console.log("run");
     location_not_found.computedStyleMap.display="none";
     weather_body.computedStyleMap.display="flex";
 
@@ -43,6 +45,7 @@ const weather_body=document.querySelector(".weather-body");
     humidity.innerHTML=`${weather_data.main.humidity}%`;
 
     wind_speed.innerHTML=`${weather_data.wind.speed}km/H`;
+
 
     switch(weather_data.weather[0].main){
 
@@ -79,4 +82,4 @@ const weather_body=document.querySelector(".weather-body");
 
 searchBtn.addEventListener("click",()=>{
     checkWeather(inputBox.value);
-})
+});
